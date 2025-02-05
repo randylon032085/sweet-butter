@@ -1,0 +1,258 @@
+<html lang="en">
+<head>
+     <!--
+
+      New Perspectives on HTML5 and CSS3, 8th Edition
+      Assignment 3
+      ITEC 112 
+      
+      Author: Randylon Torda
+      Date:   2023-11-26
+
+      Filename:   s&b.html
+
+   -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet & Butter</title>
+    <link rel="stylesheet" href="sytle1.css" />
+    <link rel="stylesheet" href="formstyle.css"/>
+    <link rel="stylesheet" href="digitaltime.css">
+    <script src="order.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    
+     
+
+</head>  
+
+<body>
+    <div class="container">
+         <div class="clock">
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+         </div>
+    </div> 
+
+    <script>
+
+        let hrs = document.getElementById("hrs");
+        let min = document.getElementById("min");
+        let sec = document.getElementById("sec");
+
+        setInterval(()=>{
+
+            let currentTime = new Date();
+
+            hrs.innerHTML = (currentTime.getHours()<10?"0":"") + currentTime.getHours ();
+            min.innerHTML = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes ();
+            sec.innerHTML = (currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds ();
+
+        },1000)
+
+        
+
+    </script>
+    
+    <header>
+        <img src="sweet.png" alt="Sweet & Butter" />
+
+        <nav class="horizontal">
+                <ul>
+                    <li><a class="active">Home</a></li>
+                     <li><a href="#">Order</a></li> 
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Directions</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+        </nav>
+    </header>
+    </header>
+
+    <article>
+        <fieldset id="MessageInfo">
+            <div class=""></div>
+            <h1>Dear valued customers.</h1>
+                <p>Thank you for taking the time to fill out our customer order form. 
+                    Please specify your preferred cake design. We guarantee that all of 
+                    your orders will be processed on time, according to your timetable.  
+                    If you have any concerns, please use our comment box so that we can 
+                    read your ideas and opinions in our shop.</p>
+                <p>We hope you appreciate our offerings.</p>
+                <p>Thank you very much.</p>
+                <p>Sweet & butter</p>
+        
+        </fieldset>
+      
+            <form id="order" action="http://www.example.com/S&B/order" method="post">
+                <fieldset id="CustInfo">
+                    <div class="wavy"></div>
+                        <span style="--i:1;">C</span>
+                        <span style="--i:2;">u</span>
+                        <span style="--i:3;">s</span>
+                        <span style="--i:4;">t</span>
+                        <span style="--i:5;">o</span>
+                        <span style="--i:6;">m</span>
+                        <span style="--i:7;">e</span>
+                        <span style="--i:8;">r</span>
+                        <span style="--i:9;">&nbsp</span>
+                        <span style="--i:10;">I</span>
+                        <span style="--i:11;">n</span>
+                        <span style="--i:12;">f</span>
+                        <span style="--i:13;">o</span>
+                    <div class="formRow">
+                        <label for="fName">First name*</label>
+                        <input name="fName" id="fName" type="text" required>
+                    </div>
+                    <div class="formRow">
+                        <label for="mName">Middle name</label>
+                        <input name="mName" id="mName" type="text">
+                    </div>
+                    <div class="formRow">
+                        <label for="lName">Last name*</label>
+                        <input name="lName" id="lName" type="text" required>
+                    </div>
+                    <div class="formRow">   
+                        <label for="Street">Street address 1</label> 
+                        <input name="custStreet" id="Street1" type="text">
+                    </div>
+
+                    <div class="formRow">
+                        <label for="street">Street address 2</label>
+                        <input name="customerStreet" id="street2" type="text">
+                    </div>
+                    
+                    </div>
+                    <div class="select-container">    
+                        <label for="City">City</label>
+                            <select class="select-box">
+                                <option value="">Select an option</option>
+                                <option value="first">Manila</option>
+                                <option value="second">Caloocan</option>
+                                <option value="third">Valenzuela</option>
+                                <option value="fourth">Malabon</option>
+                            </select>
+                    </div>
+                    <div class="formRow">
+                        <label for="zip">Postal code</label> 
+                        <input name="custZip" id="zip" type="text" placeholder="nnnn"
+                            pattern="\d{4}"/>       
+                    </div>
+                    <div class="formRow">
+                        <label for="phone">Phone number</label>
+                        <input name="custPhone" id="phone" type="tel" placeholder="(+63)000-000-0000" 
+                            pattern="((^(\+)(\d){12}$)|(^\d{11}$))"/>
+                    </div>
+                    <div class="formRow">
+                        <label for="mail">E-mail*</label>
+                        <input name="custEmail" id="mail" type="email" required>
+                    </div>
+                </fieldset>
+
+                <fieldset id="CustOrder">
+                    <div class="wavy"></div>
+                        <span style="--i:1;">O</span>
+                        <span style="--i:2;">r</span>
+                        <span style="--i:3;">d</span>
+                        <span style="--i:4;">e</span>
+                        <span style="--i:5;">r</span>
+                        <span style="--i:6;">&nbsp</span>
+                        <span style="--i:7;">d</span>
+                        <span style="--i:8;">e</span>
+                        <span style="--i:9;">t</span>
+                        <span style="--i:10;">a</span>
+                        <span style="--i:11;">i</span>
+                        <span style="--i:12;">l</span>
+                        <span style="--i:13;">s</span>
+
+                        
+                        <div class="formRow">
+                            <label for="event">Date of event</label>
+                            <input name="Event" id="date" type="date">
+                        </div>
+                    
+                        <div class="formRow">
+                            <label for="Event">Time of event</label>
+                            <input name="pickTime" id="event" type="time" />
+                        </div>
+
+                        <div class="select-container">
+                            <label for="Design">Cake design</label>
+                                <select class="selec-box">
+                                    <option value="">Select an option</option>
+                                    <option value="first">Cake 1</option>
+                                    <option value="second">Cake 2</option>
+                                    <option value="third">Cake 3</option>
+                                </select>
+                        </div>
+
+                        <div class="formRow">
+                            <label for="orderSpin">How many order?</label>
+                            <input name="odersDetail"  id="orderSpin" type="number"
+                                value="1" step="1" min="0" max="10">     
+                        </div>
+
+                        <div class="formRow">
+                            <label for="color">Color Item</label>
+                            <input name="color" id="color" type="color">
+                        </div>
+
+                        <div class="formRow">
+                            <label for="rangebox">Rate the order </label>
+                            <input name="slideOrder" id="rangebox" type="range" 
+                                value="5" step="1" min="0" max="10">
+
+                        </div>
+                        <div class="formRow">
+                            <label>Order Type</label>
+                            <fieldset class="optGroup">
+                                <label for="Delivery">Delivery</label>
+                                <input name="oType" id="Delivery" value="Delivery" type="radio">
+                                <label for="Pick-up">Pick-up</label>
+                                <input name="oType" id="fPick-up" value="Pick-up" type="radio">
+                            </fieldset>
+                        </div>
+
+                        <div class="formRow">
+                        <label for="Delivery">Delivery address</label>
+                        <input name="street" id="street" type="text">
+                        </div>
+                        <label for="commbox">Please put your intruction upon delivery</label>
+                        <textarea name="CustOrder" id="commbox"></textarea>
+                </fieldset>
+                        <div id="buttons">
+                            <input type="Submit" value="Submit My Order" />
+                            <input type="reset" value="Cancel" />
+                        </div>
+            </form>
+    </article>   
+</body>
+<style>
+    footer{
+        column-count: 2;
+        
+    }
+    
+    footer h1,h2 {
+        font-size: 1.3em;
+        
+    }
+
+</style>
+<div class="footer">
+<footer>
+    <H1>About Sweet and butter</H1>
+        <p>About us</p>
+        <p>Terms and Conditions</p>
+        <p>Privacy Policy</p>
+    <h1>Help & Information</h1>
+        <p>Contact us</p>
+        <p>FAQs</p>
+
+    <h2>Alwasy check our page for new designs and disounts!</h2>
+</div>
+</footer>
+
+</html>

@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/*
+      New Perspectives on HTML5 and CSS3, 8th Edition
+      Assignment 3
+      ITEC 112 
+      
+      Author: Randylon Torda
+      Date:  2023-11-26 
+
+      Filename:   divfor.css
+
+*/
+
+/*  Form style */
+
+
+#CustInfo span {
+    position: relative;
+    -webkit-box-reflect: below -9.9px linear-gradient(transparent, rgba(0,0,0,0.2));
+    display: inline-block;
+    color:black;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate
+{
+    0%
+      {
+        transform: translateY(0px);
+      }
+    20%
+      {
+        transform: translateY(-13px);
+      }
+    40%,100%
+      {
+        transform: translateY(0px);
+      }
+}
+
+#CustOrder span {
+  position: relative;
+  -webkit-box-reflect: below -9.9px linear-gradient(transparent, rgba(0,0,0,0.2));
+  display: inline-block;
+  color:black;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  animation: animate 1s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate
+{
+    0%
+      {
+        transform: translateY(0px);
+      }
+    20%
+      {
+        transform: translateY(-13px);
+      }
+    40%,100%
+      {
+        transform: translateY(0px);
+      }
+}
+
+
+
+div.select-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 7px 0px;
+}
+
+div.select-container > * {
+    flex: 1 1 150px;
+}
+
+div.formRow {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 7px 0px;
+}
+div.formRow > * {
+    flex: 1 1 150px;
+}
+
+form#order {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+form#order > fieldset {
+    background: linear-gradient(to right,rgba(255,0,0,0), rgb(252, 239, 241));
+    border: 6px double rgb(238, 59, 89);
+    border-radius: 10px;
+    flex: 1 1 300px;
+    font-size: 0.85em;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: inset 1px 1px 10px rgb(128, 128, 128);
+    margin-top: 40px;
+    margin-bottom: -200px;
+   
+}
+
+/* Spiner Style */
+
+div.formRow > input#orderSpin {
+  flex: 0 0 50px;
+}
+
+/* Textarea style */
+  
+textarea {
+  margin-top: 10px;
+  margin-left: 2px;
+  height: 70px;
+  width: 100%;
+}
+
+/* Form Button Styles */
+
+div#buttons {
+  text-align:center;
+  width: 100%;
+  margin-top: 200px;
+  margin-bottom: -250px;
+
+  
+}
+
+input[type='submit'], input[type='reset'] {
+  font-size: 1.0em;
+  padding: 5px;
+  margin: 15px;
+  
+}
+  
+

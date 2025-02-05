@@ -1,0 +1,90 @@
+@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Assignment 3
+   ITEC 112 
+
+
+   Name: Randylon
+   Date: 2023-11-26
+
+
+   Filename: digitaltime.css
+
+
+/* container clock sytle */
+
+.container {
+    width: 300px;
+    height: 82px;
+    position: absolute;
+    top: 13%;
+    left: 5%;
+    border-radius: 20px;
+    transform: translateX(-50%,-50%);
+    font-family: 'Orbitron', sans-serif;
+    color: blanchedalmond;
+}
+
+.clock {
+    width: 112%;
+    height: 100%;
+    background-color: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+.container::before {
+    content: '';
+    width: 150px;
+    height: 75px;
+    background: red;
+    border-radius: 5px;
+    left: 20px;
+    top: 1px;
+    position: absolute;
+    z-index: -1;
+
+}
+.container::after{
+    content: '';
+    width: 150px;
+    height: 75px;
+    background: rgb(113, 0, 128);
+    border-radius: 5px;
+    right: -15px;
+    bottom: 1px;
+    position: absolute;
+    z-index: -1;
+}
+
+.clock span {
+    font-size: 40px;
+    width: 120px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+.clock span::after {
+    
+    font-size: 10px;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hrs::after {
+    content: 'HOURS';
+}
+
+#min::after {
+    content: 'MINS';
+}
+
+#sec::after {
+    content: 'SEC';
+}
